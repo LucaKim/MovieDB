@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup, NavigableString, Tag
 import csv
 
+# 네이버 영화 자동 크롤링 연습용
 URL = "https://movie.naver.com/movie/running/current.nhn"
 response = requests.get(URL)
 
@@ -23,3 +24,4 @@ for a_tag in movies:
 
 for name in movie_data:
     print(name['title'] + "/"+ name['code'])
+
